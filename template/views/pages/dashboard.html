@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="dashbord.css">
+    <title>Request</title>
+
+</head>
+
+<body>
+    <%- include('../partials/navbar.html')%>
+
+        <div class="dashboard">
+            <h1 class="donor hide"><%=admin_id%></h1>
+
+           
+            <!-- <div class="slideshow">
+                <div id="slider">
+                    <div class="slides">
+                        <img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg"
+                            width="100%" />
+                    </div>
+                    <div class="slides">
+                        <img src="https://w7.pngwing.com/pngs/286/780/png-transparent-healthcare-industry-health-care-medicine-health-system-patient-doctors-and-nurses-service-hand-people.png"
+                            width="100%" />
+                    </div>
+
+                    <div class="slides">
+                        <img src="https://img.freepik.com/premium-photo/blood-donation-concept-human-holding-blood-sign-connecting-by-heart-rate_625883-285.jpg?size=626&ext=jpg&ga=GA1.2.813739782.1665684449"
+                            width="100%" />
+                    </div>
+
+                    <div class="slides">
+                        <img src="https://t3.ftcdn.net/jpg/03/16/35/90/240_F_316359061_gK1Y38wHpCwaxe3GpUgTN7k0HfoJyDJU.jpg"
+                            width="100%" />
+                    </div>
+
+                    <div class="slides">
+                        <img src="https://t3.ftcdn.net/jpg/03/14/04/60/240_F_314046082_EZB2C35TfNe5ct7n8OcoVUWtHg4Qfq4k.jpg"
+                            width="100%" />
+                    </div>
+
+                    <div class="slides">
+                        <img src="https://t3.ftcdn.net/jpg/03/61/09/38/240_F_361093876_kLd5JMSp5lTG3SaTfGmRKuYdKoHYeQHE.jpg"
+                            width="100%" />
+                    </div>
+
+                    <div id="dot">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </div> -->
+
+            <!-- new vishwaas -->
+            <div  class="slideshow">
+                <div id="slider">
+                    <div class="slides">
+                        <img src="https://www.aachifoods.com/data/banner/wb-10.jpg" width="100%" />
+                    </div>
+                    <div class="slides">
+                        <img src="https://www.aachifoods.com/data/banner/wb-7.jpg" width="100%" />
+                    </div>
+    
+                    <!-- <div class="slides">
+                        <img src="https://www.aachifoods.com/data/banner/1668247934.jpg" width="100%" />
+                    </div>
+    
+                    <div class="slides">
+                        <img src="https://www.aachifoods.com/data/banner/aachi-banner-3.jpg" width="100%" />
+                    </div> -->
+    
+                    <div class="slides">
+                        <img src="https://www.aachifoods.com/data/banner/wb-5.jpg" width="100%" />
+                    </div>
+                    <div class="slides">
+                        <img src="https://www.tuvsud.com/-/media/regions/in/images/campaign/akshata/ss-225001330-spices-testing-services.jpg?h=487&w=1707&la=en-IN&hash=27F69F40ADCC32E58E634E2BF1FF348F" width="100%" />
+                    </div>
+                    <!-- <div class="slides">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3P5Us4Ajs5vrtlD3NnEiK4yr5tYy0tyQTc8lid5uTdLOQpXes8M-Ui5WeqMuTfc4eOkM&usqp=CAU" width="100%" />
+                    </div> -->
+    
+                    <div class="slides">
+                        <img src="cyclic process.jpg" width="100%" />
+                    </div>
+    
+                    <div id="dot">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+
+
+                <label for="">Give blood <span>save life</span></label>
+                <div class="lifes">
+
+                    <form action="/add_donor" method="get">
+                        <input type="text" name="program_id" class="hide">
+                        <input type="submit" class='button' value="Donate" >
+                     
+                    </form>
+                    <form action="/request_form" method="get">
+                        <input type="text" name="program_id" class="hide">
+                        <input type="submit" class='button' value="receive" >
+                     
+                    </form>
+                    
+
+
+                </div>
+
+            </div>
+            <div class="error-box">
+                <p>you recently give the blood,so donate blood after 3 months from last donated date...</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+
+
+</body>
+<script src="/slider.js"></script>
+
+<script src="/success.js"></script>
+<script>
+    const url =document.querySelector('.donor').innerHTML
+    const admin_id=url.slice(6)
+   sessionStorage.setItem('url',admin_id);
+const mode = sessionStorage.getItem('url');
+console.log(mode);
+</script>
+</html>

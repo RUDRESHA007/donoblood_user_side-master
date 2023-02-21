@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity</title>
+    <link rel="stylesheet" href="search_blood.css ">
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+</head>
+
+    <body>
+        <%- include('../partials/navbar.html')%>
+    
+            <div class="request_sec">
+                <h1>Donors Details</h1>
+
+                <div class="requests">
+                    <% data.forEach(function(itm,i){ %>
+                    <div class="card">
+
+            
+                        <table class="detailes" >
+                            <tr class="fields">
+                                <th>NAME:</th>
+                                <td><%=data[i].donor_name %></td>
+    
+                            </tr>
+                            <tr class="fields">
+                                <th>DOB:</td>
+                                <td><%=data[i].date_of_birth %></td>
+    
+                            </tr>
+                            <tr class="fields">
+                                <th>PHONE NO:</td>
+                                <td><%=data[i].phone %></td>
+    
+                            </tr>
+                            <tr class="fields">
+                                <th>LOCATION:</td>
+                                <td><%=data[i].address %>  </td>
+    
+                            </tr>
+                            <tr class="fields">
+                                <th>BLOOD GROUP:</td>
+                                <td><%=data[i].blood_type %></td>
+    
+                            </tr>
+                            <tr class="fields">
+                                <th>UNIT OF BLOOD:</td>
+                                <td><%=data[i].unit_of_blood %></td>
+    
+                            </tr>
+
+                        </table>
+                    
+    
+                    </div>
+                                        <% }); %>
+
+    
+                </div>
+            </div>
+    
+    </body>
+
+</html>

@@ -1,0 +1,87 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    font-family: 'Prompt', sans-serif;
+    font-weight: 900;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.stocks_sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* top: 9rem; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    align-content: center;
+    /* flex-direction: column; */
+}
+.stacks{
+    /* margin-top: 8rem; */
+    /* padding: 1rem; */
+    width: 35rem;
+    height:auto;
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-content: center;
+    /* flex-direction: column; */
+}
+  
+
+
+
+
+.stack{
+    width: 6rem;
+    height: 6rem;
+    text-align: left;
+    color:white;
+    overflow: auto;
+    border-radius: 1rem;
+    border: none
+    ;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(47, 45, 45, 0.717);
+    transition: .5s ease-in;
+}
+
+.stack:hover{
+    transform: scale(1.15);
+   
+}
+
+
+
+.unit_details{
+    margin-top: .5rem;
+    text-align: right;
+    font-size: .9rem;
+}
+.units{
+    text-align: right;
+    color:white;
+
+    margin-top: .9rem;
+    font-size: 1em;
+}
+.stack span
+{
+    font-size: .9rem;
+    padding: 0  0 0 .3rem;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
+}

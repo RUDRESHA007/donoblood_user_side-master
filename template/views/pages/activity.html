@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity</title>
+    <link rel="stylesheet" href="activity.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.html')%>
+        <div class="activity_sec">
+            <h4>Activitys</h4>
+            <div class="web_activitys">
+                <% data.forEach(function(itm,i){ %>
+
+                    <table class="activity">
+                        <tr>
+                            <th>Token No</th>
+                            <th>application Date</th>
+                            <th>Hospital name</th>
+                            <th>donation date</th>
+                            <th> status</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%=data[i]._id %>
+                            </td>
+                            <td>
+                                <%=data[i].applyed_date %>
+                            </td>
+                            <td>
+                                <%=data[i].hospital %>
+                            </td>
+                            <td>
+                                <%=data[i].donate_date %>
+                            </td>
+                            <td STYLE="COLOR:ORANGE;font-weight: 700;">
+                                <%=data[i].status %>
+                            </td>
+                        </tr>
+                    </table>
+                    <% }); %>
+
+
+
+                        <% data2.forEach(function(itm,i){ %>
+                            <table class="activity">
+                                <tr>
+                                    <th>application No</th>
+                                    <th>application Date</th>
+                                    <th>Hospital name</th>
+                                    <th>donation date</th>
+                                    <th>application status</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <%=data2[i]._id %>
+                                    </td>
+                                    <td>
+                                        <%=data2[i].applyed_date %>
+                                    </td>
+                                    <td>
+                                        <%=data2[i].hospital %>
+                                    </td>
+                                    <td>
+                                        <%=data2[i].donate_date %>
+                                    </td>
+                                    <td STYLE="COLOR:ORANGE;font-weight: 700;">
+                                        <%=data2[i].status %>
+                                    </td>
+                                </tr>
+                            </table>
+                            <% }); %>
+
+
+                                <% data3.forEach(function(itm,i){ %>
+                                    <table class="activity">
+                                        <tr>
+                                            <th>application No</th>
+                                            <th>application Date</th>
+                                            <th>Hospital name</th>
+                                            <th>donation date</th>
+                                            <th>application status</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <%=data3[i]._id %>
+                                            </td>
+                                            <td>
+                                                <%=data3[i].applyed_date %>
+                                            </td>
+                                            <td>
+                                                <%=data3[i].hospital %>
+                                            </td>
+                                            <td>
+                                                <%=data3[i].donation_date %>
+                                            </td>
+                                            <td STYLE="COLOR:rgb(36, 121, 14);font-weight: 700;">
+                                                <%=data3[i].status %>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <% }); %>
+                                        <% data4.forEach(function(itm,i){ %>
+                                            <table class="activity">
+                                                <tr>
+                                                    <th>application No</th>
+                                                    <th>application Date</th>
+                                                    <th>Hospital name</th>
+                                                    <th>donation date</th>
+                                                    <th>application status</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <%=data4[i]._id %>
+                                                    </td>
+                                                    <td>
+                                                        <%=data4[i].applyed_date %>
+                                                    </td>
+                                                    <td>
+                                                        <%=data4[i].hospital %>
+                                                    </td>
+                                                    <td>
+                                                        <%=data4[i].donation_date %>
+                                                    </td>
+                                                    <td STYLE="COLOR:rgb(36, 121, 14);font-weight: 700;">
+                                                        <%=data4[i].status %>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <% }); %>
+                                                <% data5.forEach(function(itm,i){ %>
+                                                    <table class="activity">
+                                                        <tr>
+                                                            <th>application No</th>
+                                                            <th>application Date</th>
+                                                            <th>Hospital name</th>
+                                                            <th>donation date</th>
+                                                            <th>application status</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <%=data5[i]._id %>
+                                                            </td>
+                                                            <td>
+                                                                <%=data5[i].applyed_date %>
+                                                            </td>
+                                                            <td>
+                                                                <%=data5[i].hospital %>
+                                                            </td>
+                                                            <td>
+                                                                <%=data5[i].donation_date %>
+                                                            </td>
+                                                            <td STYLE="COLOR:rgb(255 1 50);font-weight: 700;">
+                                                                <%=data5[i].status %>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <% }); %>
+
+            </div>
+            <div class="mbl_activitys">
+                <% data.forEach(function(itm,i){ %>
+                    <table class="activity">
+                        <tr>
+                            <th>Token No:</th>
+                            <td>
+                                <%=data[i]._id %>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>application Date:</td>
+                            <td>
+                                <%=data[i].applyed_date %>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th>Hospital name:</td>
+                            <td>
+                                <%=data[i].hospital %>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th>donation date:</td>
+                            <td>
+                                <%=data[i].donation_date %>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th> status:</td>
+                            <td STYLE="COLOR:ORANGE;font-weight: 700;">
+                                <%=data[i].status %>
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <% }); %>
+                        <% data2.forEach(function(itm,i){ %>
+                            <table class="activity">
+                                <tr>
+                                    <th>Token No:</th>
+                                    <td>
+                                        <%=data2[i]._id %>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>application Date:</td>
+                                    <td>
+                                        <%=data2[i].applyed_date %>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>Hospital name:</td>
+                                    <td>
+                                        <%=data2[i].hospital %>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>donation date:</td>
+                                    <td>
+                                        <%=data2[i].donation_date %>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th> status:</td>
+                                    <td STYLE="COLOR:ORANGE;font-weight: 700;">
+                                        <%=data2[i].status %>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                            <% }); %>
+                                <% data3.forEach(function(itm,i){ %>
+                                    <table class="activity">
+                                        <tr>
+                                            <th>Token No:</th>
+                                            <td>
+                                                <%=data3[i]._id %>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>application Date:</td>
+                                            <td>
+                                                <%=data3[i].applyed_date %>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Hospital name:</td>
+                                            <td>
+                                                <%=data3[i].hospital %>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>donation date:</td>
+                                            <td>
+                                                <%=data3[i].donation_date %>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th> status:</td>
+                                            <td STYLE="COLOR:rgb(36, 121, 14);font-weight: 700;">
+                                                <%=data3[i].status %>
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+                                    <% }); %>
+                                        <% data4.forEach(function(itm,i){ %>
+                                            <table class="activity">
+                                                <tr>
+                                                    <th>Token No:</th>
+                                                    <td>
+                                                        <%=data4[i]._id %>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>application Date:</td>
+                                                    <td>
+                                                        <%=data4[i].applyed_date %>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>Hospital name:</td>
+                                                    <td>
+                                                        <%=data4[i].hospital %>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>donation date:</td>
+                                                    <td>
+                                                        <%=data4[i].donation_date %>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th> status:</td>
+                                                    <td STYLE="COLOR:rgb(36, 121, 14);font-weight: 700;">
+                                                        <%=data4[i].status %>
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+                                            <% }); %>
+                                                <% data5.forEach(function(itm,i){ %>
+                                                    <table class="activity">
+                                                        <tr>
+                                                            <th>Token No:</th>
+                                                            <td>
+                                                                <%=data5[i]._id %>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>application Date:</td>
+                                                            <td>
+                                                                <%=data5[i].applyed_date %>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Hospital name:</td>
+                                                            <td>
+                                                                <%=data5[i].hospital %>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>donation date:</td>
+                                                            <td>
+                                                                <%=data5[i].donation_date %>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th> status:</td>
+                                                            <td STYLE="COLOR:rgb(255 1 50);font-weight: 700;">
+                                                                <%=data5[i].status %>
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </table>
+                                                    <% }); %>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- mobile -->
+
+</body>
+
+</html>

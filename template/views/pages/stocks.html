@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/all_style.css">
+
+    <title>stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <link rel="stylesheet" href="stocks.css">
+</head>
+
+<body>
+    <%- include('../partials/navbar.html')%>
+
+
+        <div class="stocks_sec">
+
+            <div class="stacks" id="stacks">
+                <div class="stack">
+                    <h2 class="group">A+</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="1">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">A-</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="90">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">B+</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="2">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">B-</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="80">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">AB+</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="80">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">AB-</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="20">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">O+</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="70">0</span></h4>
+                    </div>
+                </div>
+                <div class="stack">
+                    <h2 class="group">O-</h2>
+                    <div class='unit_details'>
+                        <h4>Units:<span class="units" value="99">0</span></h4>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+</body>
+<script>
+
+    const blood_groups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
+    //donor donated blood stocks
+    const d_ar1 = []
+    const d_ar2 = []
+    const d_ar3 = []
+    const d_ar4 = []
+    const d_ar5 = []
+    const d_ar6 = []
+    const d_ar7 = []
+    const d_ar8 = []
+    '<% data.forEach(function(itm,i){ %>'
+    if ('<%=data[i].blood_type %>' === 'A+') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar1.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'A-') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar2.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'B+') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar3.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'B-') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar4.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'AB+') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar5.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'AB-') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar6.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'O+') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar7.push(blood_unit)
+    }
+    if ('<%=data[i].blood_type %>' === 'O-') {
+        const blood_unit = parseInt("<%=data[i].unit_of_blood %>");
+        d_ar8.push(blood_unit)
+    }
+
+
+    '<% }); %>'
+
+    //sum of all perticular blood group units
+    const A_pos = d_ar1.reduce((a, b) => a + b, 0);
+    const A_neg = d_ar2.reduce((a, b) => a + b, 0);
+    const B_pos = d_ar3.reduce((a, b) => a + b, 0);
+    const B_neg = d_ar4.reduce((a, b) => a + b, 0);
+    const AB_pos = d_ar5.reduce((a, b) => a + b, 0);
+    const AB_neg = d_ar6.reduce((a, b) => a + b, 0);
+    const O_pos = d_ar7.reduce((a, b) => a + b, 0);
+    const O_neg = d_ar8.reduce((a, b) => a + b, 0);
+
+    const donor_stack = [A_pos, A_neg, B_pos, B_neg, AB_pos, AB_neg, O_pos, O_neg]
+
+    //-----------------------------------------------------------------------------------
+
+    //reciver can take the blood from donor donated blood group
+
+
+    const p_ar1 = []
+    const p_ar2 = []
+    const p_ar3 = []
+    const p_ar4 = []
+    const p_ar5 = []
+    const p_ar6 = []
+    const p_ar7 = []
+    const p_ar8 = []
+    '<% data2.forEach(function(itm,i){ %>'
+    if ('<%=data2[i].blood_type %>' === 'A+') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar1.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'A-') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar2.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'B+') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar3.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'B-') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar4.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'AB+') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar5.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'AB-') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar6.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'O+') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar7.push(blood_unit)
+    }
+    if ('<%=data2[i].blood_type %>' === 'O-') {
+        const blood_unit = parseInt("<%=data2[i].unit_of_blood %>");
+        p_ar8.push(blood_unit)
+    }
+
+
+    '<% }); %>'
+
+
+    //sum of all perticular blood group units
+    const A_pos_pt = p_ar1.reduce((a, b) => a + b, 0);
+    const A_neg_pt = p_ar2.reduce((a, b) => a + b, 0);
+    const B_pos_pt = p_ar3.reduce((a, b) => a + b, 0);
+    const B_neg_pt = p_ar4.reduce((a, b) => a + b, 0);
+    const AB_pos_pt = p_ar5.reduce((a, b) => a + b, 0);
+    const AB_neg_pt = p_ar6.reduce((a, b) => a + b, 0);
+    const O_pos_pt = p_ar7.reduce((a, b) => a + b, 0);
+    const O_neg_pt = p_ar8.reduce((a, b) => a + b, 0);
+
+    const reciver_stack = [A_pos_pt, A_neg_pt, B_pos_pt, B_neg_pt, AB_pos_pt, AB_neg_pt, O_pos_pt, O_neg_pt]
+
+
+    //we can subtrack reciver blood unit stack from donor blood unit stack
+
+    const uni = document.querySelectorAll('span');
+    uni.forEach((ele, i) => {
+        uni[i].attributes[1].value = donor_stack[i] - reciver_stack[i]
+
+    })
+
+
+
+    //-----------------------------------------------------------------------------------
+
+
+
+
+
+    //animated and color changer section
+
+    const counters = document.querySelectorAll('.units')
+
+    // animated counter 
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('value');//+ for convert string to number
+            const count = +counter.innerText;
+
+            if (count < target) {
+                counter.innerText = count + 1;
+                setInterval(updateCount, 110);
+            }
+        };
+        updateCount();
+    });
+
+
+
+    //color changer when stack is bellow 10 then it changes to red, when stack is above 10 then its turn to green
+    counters.forEach((counter, i) => {
+        const value = +counter.getAttribute('value');
+        const stack = document.querySelectorAll('.stack')
+
+        if (value > 10) {
+            stack[i].style.backgroundColor = "rgba(0, 128, 0, 0.758)";
+            // console.log(stack); 
+        }
+        else {
+            stack[i].style.backgroundColor = "rgba(255, 0, 0, 0.850)";
+
+        }
+    })
+
+
+</script>
+
+</html>

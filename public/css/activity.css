@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&family=Prompt:ital,wght@0,400;1,300&family=Secular+One&family=Ubuntu:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* *::-webkit-scrollbar {
+  display: none;
+} */
+
+.activity_sec {
+  padding: 0 10REM;
+  max-width: 1800px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  /* background-color: gray; */
+}
+.activity_sec h4 {
+  position: relative;
+  text-align: center;
+  color: rgb(10, 8, 151);
+  top: 7rem;
+  width: 100%;
+  background: transparent;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.web_activitys {
+
+width: 100%;
+
+height: 26rem;
+
+/* background-color: yellow; */
+
+display: flex;
+
+align-items: center;
+
+/* justify-content: center; */
+
+flex-direction: column;
+
+border-radius: .5rem;
+
+flex-direction: column;
+
+overflow: auto;
+
+gap: 1rem;
+
+margin-top: 7rem;
+
+margin-bottom: .5rem;
+
+/* background: red; */
+
+padding: 1rem 1rem 3rem 1rem;
+}
+
+.web_activitys .activity {
+  background-color: #fff;
+  width: 100%;
+  height: 7rem;
+  /* overflow: hidden; */
+  position:relative;
+  top:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-shadow: .1rem .1rem .5rem black;
+  padding: .5rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+
+.web_activitys .activity th {
+
+  width: 10rem;
+
+  font-size: .6rem;
+  font-weight: 900;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-bottom: 0.01rem solid #00000078;
+  text-transform: uppercase;
+}
+
+
+.web_activitys .activity td {
+  font-weight: 500;
+  width: 10rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: .8rem;
+  /* border: .1rem solid black; */
+}
+
+td:nth-child(3) {
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+/* responsive */
+
+
+/* mbl responsive display is hidden */
+@media only screen and (max-width: 1500px) {
+  .mbl_activitys {
+    display: none;
+  }
+}
+
+
+/* desktop and tab size displayt */
+@media only screen and (max-width: 950px) {
+  .activity_sec {
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .activity_sec {
+    padding: 0 4rem;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .activity_sec {
+    padding: 0 1rem;
+    /* margin-top: 6rem; */
+  }
+
+  .web_activitys .activity th {
+    width: 2rem;
+    font-size: .6rem;
+
+  }
+
+  .web_activitys .activity td {
+    width: 2rem;
+    font-size: .6rem;
+
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .web_activitys {
+    display: none;
+  }
+
+  .mbl_activitys {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: .5rem;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    overflow: auto;
+    padding: 1.5rem;
+    gap:1rem;
+  }
+
+  .activity {
+    text-align: left;
+    /* width: auto; */
+    /* overflow: hidden; */
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    word-spacing: 0rem;
+    /* overflow: auto; */
+    position:relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: .5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: .1rem .1rem .5rem black;
+    padding: .5rem;
+    border-collapse: collapse;
+    /* text-align: center; */
+  }
+
+  .activity th {
+    border: none;
+    height: 2.5rem;
+    width: 8rem;
+    /* padding: .4rem; */
+  }
+
+  .activity td {
+    /* width: 8rem; */
+    height: 2rem;
+    overflow: scroll;
+    padding: 0 .2rem;
+  }
+
+}
+

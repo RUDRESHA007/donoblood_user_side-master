@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&family=Prompt:ital,wght@0,400;1,300&family=Secular+One&family=Ubuntu:wght@700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Comfortaa, cursive;
+
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.program_sec {
+  margin-top: 0rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background-color: gray; */
+}
+
+.program_list {
+  width: 80%;
+  margin-top: 7rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.program_list .programs {
+  /* position: absolute; */
+  margin-top: 2rem;
+text-transform: uppercase;
+  width: 15rem;
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  flex-direction: column;
+  box-shadow: .1rem .1rem .5rem black;
+  padding: 1rem;
+
+}
+.program_list .programs .program_details {
+    width: 100%;
+    height: 100%;
+    text-transform:capitalize;
+
+    text-align: left;
+
+
+}
+.program_list .programs .program_details .program_name{
+    margin: 0 0 .5rem 0;
+    font-size: 1.5rem;
+    color: rgb(72, 0, 255);
+    text-align: center;
+
+}
+.program_list .programs .program_details .program_date{
+    margin: 0 0 .5rem 0;
+}
+.applay_now{
+
+    padding:.3rem .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    background-color: rgb(72, 0, 255);
+    margin:.9rem .5rem;
+    color:whitesmoke;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+}

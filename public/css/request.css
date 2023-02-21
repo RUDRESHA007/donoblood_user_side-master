@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&family=Prompt:ital,wght@0,400;1,300&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+
+}
+.patient_request_section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    position: absolute;
+    top:7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.patient_request_section .request_sec{
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+}
+
+
+.patient_request_section .card{
+    /* position: relative; */
+    font-size: .8rem;
+    font-weight: 900;
+    width: 25rem;
+    height: 18rem;
+    border-radius: 1rem;
+    display: flex;
+    /* align-items: center;
+    justify-content: space-around; */
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #fff;
+    box-shadow: .1rem .1rem .5rem  black;
+
+}
+
+.patient_request_section .card .detailes{
+
+text-align: justify;  
+}
+.patient_request_section .card .fields {
+    font-weight: 500;
+    padding: 1rem;
+    width: auto;
+    border: none;
+    outline: none;
+}
+.status_sec{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;    
+
+}
+.status_sec .status{
+    width: 6rem;
+    padding: .2rem;
+}
+
+.status_sec .status {
+    width: 7rem;
+    font-size: 1rem;
+    height: 2.2rem;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    background: blue;
+    background-origin: content-box;
+    animation: border_run 5s ease alternate infinite;
+}
+.status_sec .Approve {
+    background-color: green;
+}
+.status_sec .Reject {
+    background-color: red;
+
+
+}
+
+.status_sec .Approve:hover {
+    background-color: rgba(0, 128, 0, 0.726);
+    cursor: pointer;
+}
+.status_sec .Reject:hover {
+    background-color: rgba(255, 0, 0, 0.639);
+    cursor: pointer;
+}
+
+
+
